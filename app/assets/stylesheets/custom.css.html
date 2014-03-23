@@ -120,11 +120,83 @@ body{font-size:16px;}
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
-</style><title>help.html</title></head><body><h1>Help</h1>
-
-<p>
-    Get help on the Ruby on Rails Tutorial at the
-    <a href="http://railstutorial.jp/help">Rails Tutorial page</a>.
-    To get helo on this sample app, see the
-    <a href="http://railstutorial.jp/book">Rails Tutorial book</a>.
-</p></body></html>
+</style><title>custom.css</title></head><body><p>@import "bootstrap";</p>
+<p>/<em> universal </em>/</p>
+<p>html {
+  overflow-y: scroll;
+}</p>
+<p>body {
+  padding-top: 60px;
+}</p>
+<p>section {
+  overflow: auto;
+}</p>
+<p>textarea {
+  resize: vertical;
+}</p>
+<p>.center {
+  text-align: center;
+  h1 {</p>
+<p>}
+}</p>
+<p>.center h1 {
+  margin-bottom: 10px;
+}</p>
+<p>h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}</p>
+<p>h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $grayLight;
+}</p>
+<p>p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}</p>
+<p>/<em> header </em>/</p>
+<h1 id="logo">logo {</h1>
+<p>float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &amp;:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}</p>
+<p>/<em> footer </em>/</p>
+<p>footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: $grayLight;
+  a {
+    color: #555;
+    &amp;:hover {
+        color: #222;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+        float: left;
+        margin-left: 10px;
+    }
+  }
+}</p></body></html>
