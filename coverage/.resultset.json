@@ -223,6 +223,38 @@
         null,
         null
       ],
+      "/var/lib/stickshift/5377deda5973ca0fb6000234/app-root/data/866243/app/controllers/sessions_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        8,
+        8,
+        5,
+        5,
+        null,
+        3,
+        3,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/var/lib/stickshift/5377deda5973ca0fb6000234/app-root/data/866243/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
       "/var/lib/stickshift/5377deda5973ca0fb6000234/app-root/data/866243/app/controllers/static_pages_controller.rb": [
         1,
         1,
@@ -236,14 +268,6 @@
         null,
         1,
         null,
-        null
-      ],
-      "/var/lib/stickshift/5377deda5973ca0fb6000234/app-root/data/866243/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        1,
         null
       ],
       "/var/lib/stickshift/5377deda5973ca0fb6000234/app-root/data/866243/app/controllers/users_controller.rb": [
@@ -275,32 +299,8 @@
         null,
         null,
         null
-      ],
-      "/var/lib/stickshift/5377deda5973ca0fb6000234/app-root/data/866243/app/controllers/sessions_controller.rb": [
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        8,
-        8,
-        5,
-        5,
-        null,
-        3,
-        3,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null
       ]
     },
-    "timestamp": 1400827661
+    "timestamp": 1400828771
   }
 }
