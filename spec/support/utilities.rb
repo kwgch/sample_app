@@ -8,7 +8,7 @@ end
 
 Rspec::Matchers.define :have_error_message do |message|
   match do |page|
-    expect(page).to have_selector('div.alert.alert-error', text: message)
+    expect(page).to have_selector(Constants::DIV_ALERT_ERROR, text: message)
   end
 end
 
