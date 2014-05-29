@@ -208,30 +208,19 @@ PLATFORMS
 DEPENDENCIES
   bcrypt
   bootstrap-sass
-<<<<<<< HEAD
-=======
   bootstrap-will_paginate
->>>>>>> FETCH_HEAD
   capybara
   coffee-rails
   coveralls
   cucumber-rails
   database_cleaner!
   factory_girl_rails
-<<<<<<< HEAD
-  jbuilder
-  jquery-rails
-  pg (= 0.15.1)
-  rails
-  rails_12factor (= 0.0.2)
-=======
   faker
   jbuilder
   jquery-rails
   pg (>= 0.15.1)
   rails
   rails_12factor (>= 0.0.2)
->>>>>>> FETCH_HEAD
   rspec-rails
   sass-rails
   sdoc
@@ -241,7 +230,4 @@ DEPENDENCIES
   sqlite3
   turbolinks
   uglifier
-<<<<<<< HEAD
-=======
   will_paginate
->>>>>>> FETCH_HEAD
