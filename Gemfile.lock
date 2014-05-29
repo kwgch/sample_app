@@ -37,6 +37,8 @@ GEM
     bcrypt (3.1.7)
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
+    bootstrap-will_paginate (0.0.10)
+      will_paginate
     builder (3.2.2)
     capybara (2.2.1)
       mime-types (>= 1.16)
@@ -74,12 +76,14 @@ GEM
     diff-lcs (1.2.5)
     docile (1.1.3)
     erubis (2.7.0)
-    execjs (2.0.2)
+    execjs (2.1.0)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.4.1)
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
+    faker (1.3.0)
+      i18n (~> 0.5)
     ffi (1.9.3)
     gherkin (2.12.2)
       multi_json (~> 1.3)
@@ -180,7 +184,7 @@ GEM
     term-ansicolor (1.3.0)
       tins (~> 1.0)
     thor (0.19.1)
-    thread_safe (0.3.3)
+    thread_safe (0.3.4)
     tilt (1.4.1)
     tins (1.3.0)
     treetop (1.4.15)
@@ -194,6 +198,7 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     websocket (1.0.7)
+    will_paginate (3.0.5)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -203,17 +208,30 @@ PLATFORMS
 DEPENDENCIES
   bcrypt
   bootstrap-sass
+<<<<<<< HEAD
+=======
+  bootstrap-will_paginate
+>>>>>>> FETCH_HEAD
   capybara
   coffee-rails
   coveralls
   cucumber-rails
   database_cleaner!
   factory_girl_rails
+<<<<<<< HEAD
   jbuilder
   jquery-rails
   pg (= 0.15.1)
   rails
   rails_12factor (= 0.0.2)
+=======
+  faker
+  jbuilder
+  jquery-rails
+  pg (>= 0.15.1)
+  rails
+  rails_12factor (>= 0.0.2)
+>>>>>>> FETCH_HEAD
   rspec-rails
   sass-rails
   sdoc
@@ -223,3 +241,7 @@ DEPENDENCIES
   sqlite3
   turbolinks
   uglifier
+<<<<<<< HEAD
+=======
+  will_paginate
+>>>>>>> FETCH_HEAD
