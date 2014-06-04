@@ -1,4 +1,3 @@
-
 namespace :db do
   desc "Fill datebase with sample data"
   task populate: :environment do
