@@ -13,6 +13,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'rspec-its'
+  gem 'rspec-collection_matchers'
   gem 'spring'
   gem 'spring-commands-rspec'
 end

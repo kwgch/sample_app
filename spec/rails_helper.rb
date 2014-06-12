@@ -6,14 +6,14 @@ require 'rspec/rails'
 require 'rspec/core'
 require 'rspec/expectations'
 require 'rspec/mocks'
-require 'rspec/autorun'
+# require 'rspec/autorun'
 require 'rspec/collection_matchers'
 require 'rspec/its'
 require 'capybara/rspec'
 
 # https://coveralls.io/r/kwgch/sample_app
-require 'coveralls'
-Coveralls.wear!
+# require 'coveralls'
+# Coveralls.wear!
 
 #http://stackoverflow.com/questions/5691727/how-to-set-config-action-controller-default-url-options-host-on-per
 Rails.application.routes.default_url_options[:host] = 'localhost:3000'

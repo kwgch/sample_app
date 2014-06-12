@@ -16,8 +16,47 @@ describe "Static pages" do
 
     it_should_behave_like "all static pages"
     it { should_not have_title('| Home') }
-  end
+    
+    describe "for signed-in users" do
+      let(:user) { FactoryGirl.create(:user) }
+      before do
+        FactoryGirl.create(:micropost, user: user, content: "Lorem ipsum")
+        FactoryGirl.create(:micropost, user: user, content: "Dolor sit amet")
+        sign_in user
+        visit root_path
+      end
+      
+      it "should render the user's feed" do
+        user.feed.each do |item|
+          expect(page).to have_selector("li##{item.id}", text: item.content)
+        end
+      end
+      
+      # 削除リンクが、現在のユーザーによって作成されていないマイクロポストには
+      # 表示されないことを確認するためのテストを作成してください。
+      it "should render the delete link if user's post" do
+        user.feed.each do |item|
+          # TODO
+        end
+      end
+      
+      # サイドバーのマイクロポストカウントのテストを追加してください。
+      # このとき、表示に単数形と複数形が正しく表示されているかどうかもテストしてください。
+      it "should have correct count of microposts" do
+        expect(page).to have_content(2)
+        expect(page).to have_content("microposts")
+      end
 
+      it "should have correct count of micropost" do
+        click_link('delete', match: :first)
+        expect(page).to have_content(1)
+        expect(page).to_not have_content("microposts")
+        expect(page).to have_content("micropost")
+      end
+      
+    end
+  end
+  
   describe "Help page" do
     before { visit help_path }
     let(:heading)    { 'Help' }
