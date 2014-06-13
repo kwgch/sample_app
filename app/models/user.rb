@@ -1,9 +1,6 @@
 class User < ActiveRecord::Base
   has_many :microposts, dependent: :destroy
-<<<<<<< HEAD
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
-=======
->>>>>>> b8685522ddc083ed4ffa201c1f7e57080fefce2c
   
 	before_save { self.email = email.downcase }
   before_create :create_remember_token
