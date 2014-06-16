@@ -9,3 +9,14 @@
 これは、以下のためのサンプルアプリケーションです。
 [*Ruby on Rails Tutorial*](http://railstutorial.jp/)
 by [Michael Hartl](http://michaelhartl.com/).
+
+
+新しい開発環境からHEROKUに上げるとき
+```
+$ heroku git:remote --app kwgch-sample-app
+$ heroku keys:add
+$ heroku push heroku
+$ heroku pg:reset DATABASE
+$ heroku run rake db:migrate
+$ heroku run rake db:populate
+```
