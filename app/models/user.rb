@@ -29,9 +29,7 @@ class User < ActiveRecord::Base
   end
   
   def feed
-    # このコードは準備段階です。
-    # 完全な実装は第11章「ユーザーをフォローする」を参照してください。
-    Micropost.where("user_id = ?", id)
+    Micropost.from_users_followed_by(self)
   end
   
   def following?(other_user)
@@ -41,10 +39,6 @@ class User < ActiveRecord::Base
   def follow!(other_user)
     relationships.create!(followed_id: other_user.id)
   end
-  
-#   def unfollow!(other_user)
-#     relationships.find_by(followed_id: other_user.id).destroy
-#   end
   
   def unfollow!(other_user)
     relationships.find_by(followed_id: other_user.id).destroy
