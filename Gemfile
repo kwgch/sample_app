@@ -16,9 +16,11 @@ gem 'turbolinks'
 gem 'jbuilder'
 gem 'bcrypt'
 
+gem 'sqlite3'
+
 # Use sqlite3 as the database for Active Record
 group :development, :test do
-  gem 'sqlite3'
+#   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'rspec-its'
   gem 'rspec-collection_matchers'
