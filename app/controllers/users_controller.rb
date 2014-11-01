@@ -1,34 +1,34 @@
-class UsersController < ApplicationController
-   before_action :signed_in_user,
+class momotarosController < ApplicationController
+   before_action :signed_in_momotaro,
                 only: [:index, :edit, :update, :destroy, :following, :followers] # SessionsHelper
-  before_action :correct_user,    only:[:edit, :update] #private
-  before_action :admin_user,      only:[:destroy] #private
+  before_action :correct_momotaro,    only:[:edit, :update] #private
+  before_action :admin_momotaro,      only:[:destroy] #private
   
   def index
-    @users = User.paginate(page: params[:page])
+    @momotaros = momotaro.paginate(page: params[:page])
   end
 
   def show
-    @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(page: params[:page])
+    @momotaro = momotaro.find(params[:id])
+    @microposts = @momotaro.microposts.paginate(page: params[:page])
   end
     
   def new
     if signed_in?
       redirect_to root_path
     end
-    @user = User.new
+    @momotaro = momotaro.new
   end
   
   def create
     if signed_in?
       redirect_to root_path
     end
-    @user = User.new(user_params)
-    if @user.save
-      sign_in @user
+    @momotaro = momotaro.new(momotaro_params)
+    if @momotaro.save
+      sign_in @momotaro
       flash[:success] = "Welcome to the Sample App!"
-      redirect_to @user
+      redirect_to @momotaro
     else
       render 'new'
     end
@@ -38,52 +38,52 @@ class UsersController < ApplicationController
   end
 
   def update 
-    if @user.update_attributes(user_params)
+    if @momotaro.update_attributes(momotaro_params)
       flash[:success] = "Profile updated"
-      redirect_to @user
+      redirect_to @momotaro
     else
       render 'edit'
     end
   end
 
   def destroy
-    user = User.find(params[:id])#.destroy
-    if user.admin?
-      flash[:error] = "Admin user can't destroy."
+    momotaro = momotaro.find(params[:id])#.destroy
+    if momotaro.admin?
+      flash[:error] = "Admin momotaro can't destroy."
     else
-      user.destroy
-      flash[:success] = "User destroyed."
+      momotaro.destroy
+      flash[:success] = "momotaro destroyed."
     end
-    redirect_to users_url
+    redirect_to momotaros_url
   end
 
   def following
     @title = "Following"
-    @user = User.find(params[:id])
-    @users = @user.followed_users.paginate(page: params[:page])
+    @momotaro = momotaro.find(params[:id])
+    @momotaros = @momotaro.followed_momotaros.paginate(page: params[:page])
     render 'show_follow'
   end
     
   def followers
     @title = "Followers"
-    @user = User.find(params[:id])
-    @users = @user.followers.paginate(page: params[:page])
+    @momotaro = momotaro.find(params[:id])
+    @momotaros = @momotaro.followers.paginate(page: params[:page])
     render 'show_follow'
   end
   
   private
 
-    def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    def momotaro_params
+      params.require(:momotaro).permit(:name, :email, :password, :password_confirmation)
     end
   
-    def correct_user
-      @user = User.find(params[:id])
-      redirect_to(root_path) unless current_user?(@user)
+    def correct_momotaro
+      @momotaro = momotaro.find(params[:id])
+      redirect_to(root_path) unless current_momotaro?(@momotaro)
     end
     
-    def admin_user
-      redirect_to(root_path) unless current_user.admin?
+    def admin_momotaro
+      redirect_to(root_path) unless current_momotaro.admin?
     end
     
 end
